@@ -75,7 +75,7 @@ FILTER_PIP_WARNINGS=| grep -v "don't match your environment"; test $${PIPESTATUS
 
 .venv:  ## Set up Python virtual environment and install requirements
 	@unset CONDA_PREFIX \
-	&& python3 -m venv $(VENV) \
+	&& python3.14 -m venv $(VENV) \
 	&& $(MAKE) requirements
 
 # Note: Installed separately as pyiceberg does not have wheels for 3.13, causing
